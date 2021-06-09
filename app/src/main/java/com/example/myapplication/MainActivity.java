@@ -1,7 +1,7 @@
 package com.example.myapplication;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.myapplication.enums.GodList;
+import java.util.EnumSet;
 import java.util.Random;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -28,14 +28,18 @@ public class MainActivity extends AppCompatActivity {
     clickMeButton = findViewById(R.id.clickMe);
     resultTextView = findViewById(R.id.result);
     godImageView = findViewById(R.id.godImageView);
+    EnumSet<GodList> godList = EnumSet.allOf(GodList.class);
+    int test = godList.size();
 
     clickMeButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        int indexRandom = new Random().nextInt(GodList.values().length);
+
+        int indexRandom = new Random().nextInt(godList.size());
+        GodList godResult = GodList.values()[indexRandom];
         resultTextView.setTextColor(Color.BLACK);
         resultTextView.setTextSize(40);
-        resultTextView.setText(GodList.values()[indexRandom].toString());
+        resultTextView.setText(godResult.getName() + "\n" + godResult.getRole().getRole());
 
       }
     });
