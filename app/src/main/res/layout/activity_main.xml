@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:background="#D1C9C9">
     <TextView
-            android:text="Choose your whore !!!"
+            android:text="Play this god if you can !!!"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView"
             android:textSize="20dp"
@@ -28,4 +28,9 @@
             android:layout_below="@id/textView"
             android:layout_marginTop="359dp" android:layout_centerHorizontal="true"
             android:clickable="true"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/godImageView"
+            android:layout_centerInParent="true"/>
 </RelativeLayout>

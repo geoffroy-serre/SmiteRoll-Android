@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
   TextView helloTextView;
   Button clickMeButton;
   TextView resultTextView;
+  ImageView godImageView;
 
 
   @Override
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     helloTextView = findViewById(R.id.textView);
     clickMeButton = findViewById(R.id.clickMe);
     resultTextView = findViewById(R.id.result);
+    godImageView = findViewById(R.id.godImageView);
 
     clickMeButton.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         resultTextView.setTextColor(Color.BLACK);
         resultTextView.setTextSize(40);
         resultTextView.setText(GodList.values()[indexRandom].toString());
+
       }
     });
 
